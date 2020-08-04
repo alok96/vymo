@@ -1,14 +1,14 @@
 package com.zef.vymo.base;
 
 import android.os.Bundle;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.Nullable;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
 
 import butterknife.ButterKnife;
 import dagger.android.support.DaggerAppCompatActivity;
 
 public abstract class BaseActivity extends DaggerAppCompatActivity {
+
     @LayoutRes
     protected abstract int layoutRes();
 

@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">vymo2</string>
+    <string name="app_name">Vymo Assignment</string>
+    <string name="empty_title">Empty Title</string>
+    <string name="emplty_num">Empty Number...</string>
+    <string name="empty_status">Empty Status...</string>
+    <string name="empty_created">Empty Created...</string>
+    <string name="msg_offline">error in network connection…Please check your network connection</string>
+    <string name="msg_error">error occurred…</string>
 </resources>
