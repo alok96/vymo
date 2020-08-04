@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_cardview"
+        android:layout_marginTop="@dimen/margin_cardview"
+        android:layout_marginEnd="@dimen/margin_cardview"
+        android:layout_marginBottom="@dimen/margin_cardview"
+        android:elevation="@dimen/elevation"
+        app:cardCornerRadius="@dimen/radius"
+        card_view:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_pull_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginEnd="@dimen/margin_layout"
+                android:layout_marginBottom="@dimen/margin_top"
+                android:gravity="center|left"
+                android:text="Pull Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tv_pull_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginEnd="@dimen/margin_layout"
+                android:layout_marginBottom="@dimen/margin_top"
+                android:gravity="center|left"
+                android:text="PR Number"
+                android:layout_below="@+id/tv_pull_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tv_pull_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginEnd="@dimen/margin_layout"
+                android:layout_marginBottom="@dimen/margin_top"
+                android:gravity="center|left"
+                android:layout_below="@+id/tv_pull_no"
+                android:text="Pull Status"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/tv_pull_created"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_layout"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginEnd="@dimen/margin_layout"
+                android:layout_marginBottom="@dimen/margin_top"
+                android:gravity="center|left"
+                android:text="Created"
+                android:layout_below="@+id/tv_pull_status"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_title" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
