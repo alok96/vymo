@@ -38,8 +38,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ownerName.setText("JakeWharton");
-        repoName.setText("ViewPagerIndicator");
+      //  ownerName.setText("JakeWharton");
+      //  repoName.setText("ViewPagerIndicator");
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
