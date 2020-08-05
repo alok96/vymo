@@ -6,5 +6,6 @@
     <string name="empty_created">Empty Created...</string>
     <string name="msg_offline">error in network connection…Please check your network connection</string>
     <string name="msg_error">error occurred…</string>
-    <string name="error_pull_response">Wrong User and Repo combination OR No pull request found</string>
+    <string name="error_pull_response">Wrong user and repo combination </string>
+    <string name="no_pull_request">No pull request found</string>
 </resources>

@@ -53,11 +53,14 @@ public class RepoPullFragment extends BaseFragment {
     }
 
     private void observableViewModel() {
-        viewModel.getUser().observe(this, user -> {
-        });
 
         viewModel.getRepos().observe(this, repos -> {
             if (repos != null) listView.setVisibility(View.VISIBLE);
+            if (repos.isEmpty()){
+                listView.setVisibility(View.GONE);
+                errorTextView.setVisibility(View.VISIBLE);
+                errorTextView.setText(R.string.no_pull_request);
+            }
         });
 
         viewModel.getError().observe(this, isError -> {
