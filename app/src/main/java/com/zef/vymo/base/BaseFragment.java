@@ -36,8 +36,8 @@ public abstract class BaseFragment extends DaggerFragment {
 
     @Override
     public void onDetach() {
-        super.onDetach();
         activity = null;
+        super.onDetach();
     }
 
     public AppCompatActivity getBaseActivity() {
@@ -47,7 +47,7 @@ public abstract class BaseFragment extends DaggerFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        if(unbinder != null) {
+        if (unbinder != null) {
             unbinder.unbind();
             unbinder = null;
         }

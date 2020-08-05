@@ -2,11 +2,17 @@ package com.zef.vymo.ui;
 
 import android.arch.lifecycle.LifecycleOwner;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.BulletSpan;
 import android.text.style.ImageSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +24,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import com.zef.vymo.R;
 import com.zef.vymo.data.RepoPullData;
 import com.zef.vymo.viewmodel.RepoPullViewModel;
@@ -85,15 +92,7 @@ public class RepoPullListAdapter extends RecyclerView.Adapter<RepoPullListAdapte
             } else tvPullNumber.setText(R.string.emplty_num);
 
             if (!TextUtils.isEmpty(row.getStatus())) {
-                if (row.getStatus().equals("Open")) {
-                    SpannableStringBuilder ssb = new SpannableStringBuilder(row.getStatus());
-                    ssb.setSpan(new ImageSpan(context, R.drawable.ic_green), 0, 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                    tvPullStatus.setText(pull_status + " " + ssb, TextView.BufferType.SPANNABLE);
-                } else {
-                    SpannableStringBuilder ssb = new SpannableStringBuilder(row.getStatus());
-                    ssb.setSpan(new ImageSpan(context, R.drawable.ic_red), 0, 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-                    tvPullStatus.setText(pull_status + " " + ssb, TextView.BufferType.SPANNABLE);
-                }
+                tvPullStatus.setText(pull_status + " " + row.getStatus());
             } else tvPullStatus.setText(R.string.empty_status);
 
             if (!TextUtils.isEmpty(row.getCreated_at())) {

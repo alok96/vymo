@@ -7,14 +7,18 @@ import com.zef.vymo.di.component.DaggerApplicationComponent;
 
 public class BaseApplication extends DaggerApplication {
 
+    ApplicationComponent component;
     @Override
     public void onCreate() {
         super.onCreate();
     }
+    public ApplicationComponent getAppComponent() {
+        return component;
+    }
 
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        ApplicationComponent component = DaggerApplicationComponent.builder().application(this).build();
+        component = DaggerApplicationComponent.builder().application(this).build();
         component.inject(this);
 
         return component;

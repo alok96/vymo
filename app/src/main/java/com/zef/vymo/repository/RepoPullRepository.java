@@ -17,8 +17,8 @@ public class RepoPullRepository {
         this.repoService = repoService;
     }
 
-    public Single<List<RepoPullData>> getRepositories() {
-        return repoService.getRepositories();
+    public Single<List<RepoPullData>> getRepositories( String ownerName, String repoName) {
+        return repoService.getRepositoriesPulls(ownerName,repoName);
     }
 
 }
